@@ -2,12 +2,16 @@ package edu.kis.vh.nursery;
 
 public class defaultCountingOutRhymer {
 
-    public static final int NUMBERS_MAX_SIZE = 12;
-    public static final int TOTAL_INITIAL_VALUE = -1;
-    public static final int DEFAULT_VALUE = -1;
+    private static final int NUMBERS_MAX_SIZE = 12;
+    private static final int TOTAL_INITIAL_VALUE = -1;
+    private static final int DEFAULT_VALUE = -1;
     private final int[] numbers = new int[NUMBERS_MAX_SIZE];
 
-    public int total = TOTAL_INITIAL_VALUE;
+    public int getTotal() {
+        return total;
+    }
+
+    private int total = TOTAL_INITIAL_VALUE;
 
     public void countIn(int in) {
         if (!isFull()) numbers[++total] = in;
